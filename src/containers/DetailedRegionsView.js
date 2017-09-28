@@ -4,8 +4,9 @@ import DetailedJumbotron from "../components/DetailedJumbotron"
 
 export default class DetailedRegionsView extends Component{
   render(){
+    let className = `hw-100-percent ${this.props.thronepedia}`
     return(
-      <div>
+      <div className={className}>
         <DetailedJumbotron/>
       </div>
     )

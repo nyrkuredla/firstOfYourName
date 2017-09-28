@@ -13,13 +13,12 @@ export default class LoseView extends Component{
     let death = getRandomDeath();
     this.setState({
       "death": death
-    })  
+    })
   }
   render(){
-    console.log('state: ', this.state)
+    let className = `hw-100-percent ${this.props.trivia}`
     return(
-      <div>
-
+      <div className={className}>
       </div>
     )
   }
