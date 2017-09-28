@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+body{
+   background: #DDD;
+=======
 @font-face {
   font-family: "GoT";
   src: url("/fonts/GoT.ttf");
@@ -8,6 +12,9 @@
   padding: 0 auto;
   font-family: "GoT";
   background: url('https://static1.squarespace.com/static/556489d4e4b064c1f32b6812/55e0930be4b05f7afaaa8275/55e09321e4b096c533f03ed9/1453140590270/?format=1500w');
+<<<<<<< HEAD
+>>>>>>> 24a0fce8d8663e1576bf3c42eae4ca0915304601
+=======
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,4 +38,5 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+>>>>>>> 984c068b6f9ed57d4c8a8fbdf4d7727fd35ffcc5
 }
