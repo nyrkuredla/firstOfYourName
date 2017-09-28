@@ -62,7 +62,7 @@ const titles =
 
  function getRandomTitle () {
    let randomIndex = _.random([lower=0], upper=[titles.length]);
-   console.log(randomIndex);
+   return titles[randomIndex];
  }
 
-getRandomTitle()
+console.log(getRandomTitle());
