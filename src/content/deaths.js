@@ -1,8 +1,9 @@
+const _ = require('lodash')
 const deaths = [
   { "id": 1, death: "killed by a White Walker", epic: false },
   { "id": 2, death: "executed by Ned Stark", epic: false },
   { "id": 3, death: "thrown out the Moon Door", epic: false },
-  { "id": 4, death: "killed by a Stark direwolf", epic: true },
+  { "id": 4, death: "killed by a Stark bannerman", epic: true },
   { "id": 5, death: "burned alive by dragonfire", epic: true },
   { "id": 6, death: "tracked and killed by the Hound", epic: true },
   { "id": 7, death: "split in half by the Mountain", epic: true },
@@ -19,7 +20,7 @@ const deaths = [
   { "id": 18, death: "burned as a sacrifice to the Lord of Light", epic: false },
   { "id": 19, death: "hunted across Westeros and executed by Beric Dondarrion, the Lightning Lord", epic: true },
   { "id": 20, death: "torn to pieces in a Kings Landing riot", epic: false },
-  { "id": 21, death: "been poisoned by the Tears of Lys", epic: true },
+  { "id": 21, death: "poisoned by the Tears of Lys", epic: true },
   { "id": 22, death: "flayed alive by the Boltons", epic: false },
   { "id": 23, death: "eaten alive by Ramsey Bolton's dogs", epic: true },
   { "id": 24, death: "found dead after a feast, having drunk yourself to death", epic: false },
@@ -30,3 +31,8 @@ const deaths = [
   { "id": 29, death: "torn apart by wights", epic: true },
   { "id": 30, death: "killed by the plague", epic: false }
 ]
+
+export function getRandomDeath () {
+  let randomIndex = _.random(0, deaths.length);
+  return deaths[randomIndex];
+}
