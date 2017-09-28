@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 
-export default class DefaultRegion extends Component{
+export default class HousesView extends Component{
   render(){
     return(
       <div>
