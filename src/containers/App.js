@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import logo from '../logo.svg';
+import React, { Component } from 'react';
 import '../styles/App.css';
 import { Route, Switch } from 'react-router-dom'
 
