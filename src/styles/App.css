@@ -1,5 +1,8 @@
 /*402e0c2*/
-
+.hw-100-percent{
+  height: 100%;
+  width: 100%;
+}
 
 button{
   background: #06192F;
@@ -36,6 +39,15 @@ button{
   font-size: large;
 }
 
+.three-column-container {
+  width: 80%;
+  height: 75%;
+}
+
+.col {
+  width: 33%;
+  height: 100%;
+}
 
 #snow{
 	background: transparent;
