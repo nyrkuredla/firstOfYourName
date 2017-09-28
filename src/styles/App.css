@@ -39,6 +39,15 @@ button{
   font-size: large;
 }
 
+.three-column-container {
+  width: 80%;
+  height: 75%;
+}
+
+.col {
+  width: 33%;
+  height: 100%;
+}
 
 #snow{
 	background: transparent;

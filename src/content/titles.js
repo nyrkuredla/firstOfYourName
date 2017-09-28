@@ -60,9 +60,7 @@ const titles =
  { title: 'Prince', epic: false, id: 58 },
  { title: 'Lady', epic: false, id: 59 } ]
 
- function getRandomTitle () {
-   let randomIndex = _.random([lower=0], upper=[titles.length]);
+export function getRandomTitle () {
+   let randomIndex = _.random(0, titles.length);
    return titles[randomIndex];
  }
-
-console.log(getRandomTitle());
