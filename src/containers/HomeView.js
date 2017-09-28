@@ -7,8 +7,9 @@ import Jumbotron from '../components/Jumbotron'
 
 export default class HomeView extends Component {
   render(){
+    let className = `hw-100-percent ${this.props.home}`
     return(
-      <div id='snow'>
+      <div className={className}>
         <div className="viewNorth">
             <div>
               <br></br>

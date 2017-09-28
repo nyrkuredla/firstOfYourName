@@ -16,26 +16,36 @@ import LoseView from './LoseView'
 
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      bodyClassName : {
+        home: "home-view",
+        thronepedia: "thronepedia-view",
+        trivia: "trivia-view"
+      }
+    }
+  }
   render() {
     return (
-      <div className="App">
+      <div className="App hw-100-percent">
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">First of Your Name</h1>
         </header> */}
         <HashRouter>
           <Switch>
-            <Route exact path='/' component={HomeView}/>
-            <Route exact path='/thronepedia' component={ThronepediaView}/>
-            <Route exact path='/thronepedia/regions' component={RegionsView}/>
-            <Route exact path='/thronepedia/houses' component={HousesView}/>
-            <Route exact path='/thronepedia/characters' component={CharactersView}/>
-            <Route exact path='/thronepedia/regions/:name' component={DetailedRegionsView}/>
-            <Route exact path='/thronepedia/houses/:name' component={DetailedHousesView}/>
-            <Route exact path='/thronepedia/characters/:name' component={DetailedCharactersView}/>
-            <Route exact path='/trivia' component={TriviaView}/>
-            <Route exact path='/trivia/win' component={WinView}/>
-            <Route exact path='/trivia/lose' component={LoseView}/>
+            <Route exact path='/' component={()=> <HomeView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia' component={()=> <ThronepediaView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/regions' component={()=> <RegionsView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/houses' component={()=> <HousesView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/characters' component={()=> <CharactersView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/regions/:name' component={()=> <DetailedRegionsView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/houses/:name' component={()=> <DetailedHousesView {...this.state.bodyClassName} />}/>
+            <Route exact path='/thronepedia/characters/:name' component={()=> <DetailedCharactersView {...this.state.bodyClassName} />}/>
+            <Route exact path='/trivia' component={()=> <TriviaView {...this.state.bodyClassName} />}/>
+            <Route exact path='/trivia/win' component={()=> <WinView {...this.state.bodyClassName} />}/>
+            <Route exact path='/trivia/lose' component={()=> <HomeView {...this.state.bodyClassName} />}/>
           </Switch>
         </HashRouter>
       </div>
