@@ -32,7 +32,7 @@ const deaths = [
   { "id": 30, death: "killed by the plague", epic: false }
 ]
 
-function getRandomDeath () {
-  let randomIndex = _.random([lower=0], upper=[deaths.length]);
+export function getRandomDeath () {
+  let randomIndex = _.random(0, deaths.length);
   return deaths[randomIndex];
 }
