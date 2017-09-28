@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-const DetailedCatCard = (props) =>{
+const DetailedListCard = (props) =>{
   return(
     <div className="">
 

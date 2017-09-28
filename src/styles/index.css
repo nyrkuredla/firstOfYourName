@@ -6,6 +6,7 @@
 .home-view {
   margin: 0 auto;
   padding: 0 auto;
+  z-index: -1000;
   font-family: "GoT";
   background: url('https://static1.squarespace.com/static/556489d4e4b064c1f32b6812/55e0930be4b05f7afaaa8275/55e09321e4b096c533f03ed9/1453140590270/?format=1500w');
   background-repeat: no-repeat;
