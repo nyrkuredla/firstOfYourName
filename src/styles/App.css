@@ -1,14 +1,17 @@
+/*402e0c2*/
+
 
 button{
   background: #06192F;
 }
 <<<<<<< HEAD
-=======
+
 @font-face {
   font-family: "GoT";
   src: url("GoT.ttf");
 }
->>>>>>> 751466cec0ff682cb752abbf1628659c47f72c7b
+=======
+>>>>>>> 8cf27f50c5e3971eca91c4578f8f132a0bb01ac2
 
 .App {
   text-align: center;
@@ -74,10 +77,6 @@ button{
 .gusModalbtn{
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 751466cec0ff682cb752abbf1628659c47f72c7b
 
 /*==================================================*/
 .stark{
@@ -170,7 +169,3 @@ button{
 */
 
 /*==================================================*/
-<<<<<<< HEAD
-=======
-
->>>>>>> 751466cec0ff682cb752abbf1628659c47f72c7b
