@@ -1,0 +1,74 @@
+#06192F
+
+button{
+  background: #06192F;
+}
+@font-face {
+  font-family: "GoT";
+  src: url("GoT.ttf");
+}
+
+.App {
+  text-align: center;
+  color: white;
+
+}
+
+.jumbotron {
+  background: transparent;
+}
+
+.logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 80px;
+  z-index: -110;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+#snow{
+	background: transparent;
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	animation: snow 20s linear infinite;
+  font-family: 'GoT';
+  color: grey;
+}
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+.loginModalbtn{
+
+
+}
+
+.regModalbtn{
+
+}
+
+.gusModalbtn{
+
+}
