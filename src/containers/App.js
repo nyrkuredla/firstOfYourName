@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, HashRouter } from 'react-router-dom'
 
 import HomeView from './HomeView'
 import ThronepediaView from './ThronepediaView'
@@ -23,8 +23,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">First of Your Name</h1>
         </header> */}
-        <HomeView/>
-        <Hashrouter>
+        <HashRouter>
           <Switch>
             <Route exact path='/' component={HomeView}/>
             <Route exact path='/thronepedia' component={ThronepediaView}/>
@@ -38,7 +37,7 @@ class App extends Component {
             <Route exact path='/trivia/win' component={WinView}/>
             <Route exact path='/trivia/lose' component={LoseView}/>
           </Switch>
-        </Hashrouter>
+        </HashRouter>
       </div>
     );
   }
