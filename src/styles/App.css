@@ -40,14 +40,11 @@ button{
 }
 
 .three-column-container {
-  width: 80%;
-  height: 75%;
+  width: 800px;
+  height: 600px;
 }
 
-.col {
-  width: 33%;
-  height: 100%;
-}
+
 
 #snow{
 	background: transparent;
