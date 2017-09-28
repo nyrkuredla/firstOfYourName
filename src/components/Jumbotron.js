@@ -9,8 +9,7 @@ export default class Jumbotron extends Component {
 
       <div className="jumbotron">
         <div className="container">
-          <h1 className="display-3">First of Your Name</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 className="display-3" className="thronepedia">Thronepedia</h1>
         </div>
         <div className="lmb">
           <ModalButtons />
