@@ -10,20 +10,20 @@ export default class HomeView extends Component {
     let className = `hw-100-percent ${this.props.home}`
     return(
       <div className={className}>
-      <div id="snow">
-        <div className="viewNorth">
-            <div>
-              <br></br>
-              <h1>
-                Home Page
-              </h1>
-              <br></br>
+        <div id="snow">
+          <div className="viewNorth">
+              <div>
+                <br></br>
+                <h1>
+                  Home Page
+                </h1>
+                <br></br>
               <div className='jt'>
                 <Jumbotron />
               </div>
             </div>
+          </div>
         </div>
-      </div>
       </div>
     )
   }
