@@ -20,7 +20,7 @@ export default class LoseView extends Component{
     return(
       <div className={className}>
         <h1>Valar Morghulis!</h1>
-        <p>You have been {this.state.death}
+        <p>You have been {this.state.death}</p>
       </div>
     )
   }
