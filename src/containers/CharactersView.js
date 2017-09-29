@@ -21,19 +21,19 @@ export default class CharactersView extends Component{
             <img src="./bronn.jpg" />
           </div>
           <div>
-            <img src="./brynden.png" />
+            <img src="./brynden2.jpg" />
           </div>
           <div>
-            <img src="./cersei.jpe" />
+            <img src="./cersei.jpg" />
           </div>
           <div>
-            <img src="./davos.jpeg" />
+            <img src="./davos.jpg" />
           </div>
           <div>
             <img src="./hound.jpg" />
           </div>
           <div>
-            <img src="./jamie.jpeg" />
+            <img src="./jaime.jpg" />
           </div>
           <div>
             <img src="./Littlefinger.jpg" />
