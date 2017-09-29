@@ -54,7 +54,7 @@ function getCorrectAns (input) {
   }
 }
 
-function getRandomAnswerArray() {
+function getIncorrectAns() {
   //TO DO: get correct answer character from state, then:
   let correctChar = "olenna" //for testing
   for (let i = answersArr.length; i < 4; i++) {
@@ -95,4 +95,4 @@ function getRandomAnswerArray() {
 //   {"house": "Arryn", "url": "houses/7"},
 //   {"house": "Mormont", "url": "houses/271"},
 //   {"house": "Tully", "url": "houses/395"}]
-console.log(getRandomAnswerArray());
+console.log(getIncorrectAns());
