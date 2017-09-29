@@ -31,13 +31,13 @@ let answersArr = [
 //on componentDidMount:
 
 //function to get random quote from quote API; exported to services file
-function fetchRandomQuote () {
+export function fetchRandomQuote () {
   axios.get(quotesLink);
   //set state: quote (from response)
 }
 
 //match character from random quote to array of possible answers. if there is an answer, proceed; if not, repeat the fetch request (this is because there are some characters and quotes that are incorrectly attributed or just very uncommon)
-function getCorrectAns (input) {
+export function getCorrectAns (input) {
   //TO DO: link input to user input on trivia page (set state)
   let quoteChar = "olenna"; //for testing
   let correctAns = { "answer": "", "isCorrect": true }
@@ -54,7 +54,7 @@ function getCorrectAns (input) {
   }
 }
 
-function getIncorrectAns() {
+export function getIncorrectAns() {
   //TO DO: get correct answer character from state, then:
   let correctChar = "olenna" //for testing
   for (let i = answersArr.length; i < 4; i++) {
