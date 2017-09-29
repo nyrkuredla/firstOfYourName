@@ -19,6 +19,8 @@ export default class LoseView extends Component{
     let className = `hw-100-percent ${this.props.trivia}`
     return(
       <div className={className}>
+        <h1>Valar Morghulis!</h1>
+        <p>You have been {this.state.death}
       </div>
     )
   }
