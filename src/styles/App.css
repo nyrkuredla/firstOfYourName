@@ -40,14 +40,11 @@ button{
 }
 
 .three-column-container {
-  width: 80%;
-  height: 75%;
+  width: 800px;
+  height: 600px;
 }
 
-.col {
-  width: 33%;
-  height: 100%;
-}
+
 
 #snow{
 	background: transparent;
@@ -57,7 +54,6 @@ button{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 1000;
 	animation: snow 20s linear infinite;
   font-family: 'GoT';
   color: grey;
