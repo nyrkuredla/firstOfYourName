@@ -40,7 +40,6 @@ const titles =
  { title: 'High Septon', epic: true, id: 38 },
  { title: 'His High Holiness', epic: true, id: 39 },
  { title: 'Father of the Faithful', epic: false, id: 40 },
- 
  { title: 'Voice of the Seven on Earth', epic: false, id: 41 },
  { title: 'Queen of the Seven Kingdoms', epic: true, id: 42 },
  { title: 'Septa', epic: false, id: 43 },
