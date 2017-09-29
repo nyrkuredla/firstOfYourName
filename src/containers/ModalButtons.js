@@ -1,4 +1,4 @@
-// Modals.js
+// ModalButtons.js
 
 import React, { Component } from 'react'
 import Modals from '../components/Modals'
