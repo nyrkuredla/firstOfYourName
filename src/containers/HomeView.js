@@ -9,8 +9,8 @@ export default class HomeView extends Component {
   render(){
     let className = `hw-100-percent ${this.props.home}`
     return(
-      <div id="snow">
       <div className={className}>
+      <div id="snow">
         <div className="viewNorth">
             <div>
               <br></br>
