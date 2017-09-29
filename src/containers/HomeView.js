@@ -1,15 +1,17 @@
 // HomeView.js
 
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Jumbotron from '../components/Jumbotron'
 
+
+
 export default class HomeView extends Component {
-  render() {
+  render(){
     let className = `hw-100-percent ${this.props.home}`
-    return (
-      <div className={className} >
-        <div id="snow">
-          <div className="viewNorth">
+    return(
+      <div id="snow">
+      <div className={className}>
+        <div className="viewNorth">
             <div>
               <br></br>
               <h1>
@@ -17,11 +19,11 @@ export default class HomeView extends Component {
               </h1>
               <br></br>
               <div className='jt'>
-                <Jumbotron/>
+                <Jumbotron />
               </div>
             </div>
-          </div>
         </div>
+      </div>
       </div>
     )
   }
