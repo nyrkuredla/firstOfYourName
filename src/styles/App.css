@@ -49,6 +49,25 @@ button{
 }
 
 
+.thronepedia-banner{
+  /*background-color: #E4D2AF;*/
+  background-image: url('/Thronepedia-Banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 362px;
+  width: 600px;
+}
+
+.trivia-banner{
+  /*background-color: #E4D2AF;*/
+  background-image: url('/Trivia-Banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 362px;
+  width: 600px;
+}
 
 #snow{
 	background: transparent;

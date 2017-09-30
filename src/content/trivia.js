@@ -31,13 +31,13 @@ let answersArr = [
 //on componentDidMount:
 
 //function to get random quote from quote API; exported to services file
-function fetchRandomQuote () {
+export function fetchRandomQuote () {
   axios.get(quotesLink);
   //set state: quote (from response)
 }
 
 //match character from random quote to array of possible answers. if there is an answer, proceed; if not, repeat the fetch request (this is because there are some characters and quotes that are incorrectly attributed or just very uncommon)
-function getCorrectAns (input) {
+export function getCorrectAns (input) {
   //TO DO: link input to user input on trivia page (set state)
   let quoteChar = "olenna"; //for testing
   let correctAns = { "answer": "", "isCorrect": true }
@@ -54,7 +54,7 @@ function getCorrectAns (input) {
   }
 }
 
-function getIncorrectAns() {
+export function getIncorrectAns() {
   //TO DO: get correct answer character from state, then:
   let correctChar = "olenna" //for testing
   for (let i = answersArr.length; i < 4; i++) {
@@ -79,20 +79,4 @@ function getIncorrectAns() {
   //if correct: display correct answer alert and user correct answer count gets added one.
   //if incorrect: display incorrect answer alert and user incorrect answer count gets added one.
 
-
-
-
-
-//HOUSES AND CHARACTERS TRIVIA (REACH)
-//major houses and their URL fragments to be appended to apiLink for searching
-// const majorHouses = [
-//   {"house": "Baratheon", "url": "houses/15"},
-//   {"house": "Stark", "url": "houses/362"},
-//   {"house": "Lannister", "url": "houses/229"},
-//   {"house": "Greyjoy", "url": "houses/169"},
-//   {"house": "Tyrell", "url": "houses/398"},
-//   {"house": "Targaryen", "url": "houses/378"},
-//   {"house": "Arryn", "url": "houses/7"},
-//   {"house": "Mormont", "url": "houses/271"},
-//   {"house": "Tully", "url": "houses/395"}]
 console.log(getIncorrectAns());

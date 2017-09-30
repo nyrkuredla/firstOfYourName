@@ -26,6 +26,7 @@ class App extends Component {
       }
     }
   }
+
   render() {
     return (
       <div className="App hw-100-percent">
