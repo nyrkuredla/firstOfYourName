@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.css';
 
+import Header from '../components/Header'
+import Select from '../components/Select'
 
 export default class HousesView extends Component{
   render(){
     let className = `hw-100-percent ${this.props.thronepedia}`
     return(
       <div className={className}>
+        <Select/>
         <div className="carousel-div col-6 mx-auto">
         <Carousel>
           <div>
