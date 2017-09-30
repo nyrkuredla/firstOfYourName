@@ -18,18 +18,18 @@ function getUniqueTitles () {
   return titlesArr;
 }
 
-// function createTitleObjects () {
-//   let count = 1;
-//   getUniqueTitles()
-//   titlesArr.forEach(function(item) {
-//     let titlesObj = { id: count, title: "", epic: false };
-//     titlesObj.title=item;
-//     titles.push(titlesObj)
-//     count += 1;
-//   })
-//   return titles
-// }
-//
-// console.log(createTitleObjects())
+function createTitleObjects () {
+  let count = 1;
+  getUniqueTitles()
+  titlesArr.forEach(function(item) {
+    let titlesObj = { id: count, title: "", epic: false };
+    titlesObj.title=item;
+    titles.push(titlesObj)
+    count += 1;
+  })
+  return titles
+}
+
+console.log(createTitleObjects())
 //
 // //TRIVIA FUNCTIONS
