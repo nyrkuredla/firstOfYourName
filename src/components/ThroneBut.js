@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 export default class ThroneBut extends Component {
   render(){
     return(
-      <div>
-        <button>
-          <Link to="/thronepedia">Connor's Favorite</Link>
+      <div className="throneButton">
+        <button id="thronepediaButton">
+          <Link to="/thronepedia">THRONEPEDIA</Link>
         </button>
       </div>
     )
