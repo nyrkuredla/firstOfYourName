@@ -79,20 +79,4 @@ export function getIncorrectAns() {
   //if correct: display correct answer alert and user correct answer count gets added one.
   //if incorrect: display incorrect answer alert and user incorrect answer count gets added one.
 
-
-
-
-
-//HOUSES AND CHARACTERS TRIVIA (REACH)
-//major houses and their URL fragments to be appended to apiLink for searching
-// const majorHouses = [
-//   {"house": "Baratheon", "url": "houses/15"},
-//   {"house": "Stark", "url": "houses/362"},
-//   {"house": "Lannister", "url": "houses/229"},
-//   {"house": "Greyjoy", "url": "houses/169"},
-//   {"house": "Tyrell", "url": "houses/398"},
-//   {"house": "Targaryen", "url": "houses/378"},
-//   {"house": "Arryn", "url": "houses/7"},
-//   {"house": "Mormont", "url": "houses/271"},
-//   {"house": "Tully", "url": "houses/395"}]
 console.log(getIncorrectAns());

@@ -24,9 +24,10 @@ export default class Select extends Component {
 
   render() {
     return (
-      <select onChange={this.handleSelect}>
+
+      <select onChange={this.handleSelect} class="custom-select">
+        <option selected>Choose a House</option>
         <option value="houses-1">houses 1</option>
-        <option value="houses-2">houses 2</option>
       </select>
     )
   }

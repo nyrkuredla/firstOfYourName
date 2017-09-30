@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-import Header from '../components/Header'
+import ThronepediaHeader from '../components/ThronepediaHeader'
 
 
 export default class RegionsView extends Component{
@@ -8,7 +8,7 @@ export default class RegionsView extends Component{
     let className = `hw-100-percent ${this.props.thronepedia}`
     return(
       <div className={className}>
-        <Header/>
+        <ThronepediaHeader/>
       </div>
     )
   }
