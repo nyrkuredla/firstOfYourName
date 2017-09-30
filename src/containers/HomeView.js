@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import Jumbotron from '../components/Jumbotron'
+import TriviaCard from '../components/TriviaCard'
 
 
 
@@ -13,10 +14,8 @@ export default class HomeView extends Component {
         <div id="snow">
           <div className="viewNorth">
               <div>
-                <br></br>
-                <h1>
-                  Home Page
-                </h1>
+                {/* <br></br>
+                <TriviaCard /> */}
                 <br></br>
               <div className='jt'>
                 <Jumbotron />

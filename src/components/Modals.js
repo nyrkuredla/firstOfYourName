@@ -54,26 +54,12 @@ export default class ModalBut extends Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+          <h2 ref={subtitle => this.subtitle = subtitle}></h2>
               {/* <button onClick={this.closeModal}>close</button> */}
-              <div id="login-overlay" className="modal-dialog modal-md">
-                <div className="modal-content">
-                  <ul className="nav nav-tabs" role="tablist">
-                    <li className="nav-item">
-                      <a className="nav-link active" data-toggle="tab" href="#login-view" role="tab">LOGIN</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" data-toggle="tab" href="#register-view" role="tab">REGISTER</a>
-                    </li>
-                  </ul>
-                <div className="tab-content">
-                  <div className="tab-pane active" id="login-view" role="tabpanel">
-                    <LoginView />
-                  </div>
-                  <div className="tab-pane" id="register-view" role="tabpanel">
-                    <RegisterView />
-                </div>
-              </div>
+          <div id="login-overlay" className="modal-dialog modal-md">
+            <div className="modal-content">
+              <RegisterView />
+
             </div>
           </div>
         </Modal>
