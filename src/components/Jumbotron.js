@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import ModalButtons from '../containers/ModalButtons'
 import ModalBut from './Modals'
+import ThroneBut from './ThroneBut'
 
 export default class Jumbotron extends Component {
   render(){
@@ -13,9 +14,9 @@ export default class Jumbotron extends Component {
           <h1 className="display-3">First of Your Name</h1>
           <p className="lead">App</p>
         </div>
-        {/* <div className="lmb">
-          <ModalButtons />
-        </div> */}
+        <div>
+          <ThroneBut />
+        </div>
         <div>
           <ModalBut />
         </div>
