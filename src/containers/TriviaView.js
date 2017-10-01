@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 
 import TriviaHeader from "../components/TriviaHeader"
+import TriviaCard from "../components/TriviaCard"
+import '../styles/scrollBackdrop.css'
 
 export default class TriviaView extends Component{
 
@@ -13,7 +15,9 @@ _handleChoice = (event) => {
     return(
     <div className={className}>
       <TriviaHeader/>
-      <div className="questions parchment">
+      <div className="parchment mx-auto">
+      <TriviaCard/>
+      {/* <div className="questions parchment">
         <h2>Who said it?</h2>
         <p>change for questions</p>
        <div className="col-6 mx-auto">
@@ -26,6 +30,7 @@ _handleChoice = (event) => {
              </label>
            </div>
          </div>
+       </div> */}
        </div>
        </div>
     )
