@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import LoginView from '../containers/LoginView'
 import RegisterView from '../containers/RegisterView'
+import './tb_styles.css'
 
 const customStyles = {
   content : {
@@ -13,7 +14,7 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
   }
 };
 
@@ -47,19 +48,16 @@ export default class ModalBut extends Component {
     return (
       <div>
         <button onClick={this.openModal}>Trivia</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onAfterOpen={this.afterOpenModal}
+            onRequestClose={this.closeModal}
+            style={customStyles}
+            contentLabel="playerName">
           <h2 ref={subtitle => this.subtitle = subtitle}></h2>
-              {/* <button onClick={this.closeModal}>close</button> */}
           <div id="login-overlay" className="modal-dialog modal-md">
             <div className="modal-content">
               <RegisterView />
-
             </div>
           </div>
         </Modal>

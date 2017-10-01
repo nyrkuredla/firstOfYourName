@@ -16,7 +16,7 @@ export default class TriviaView extends Component{
         <button className="answerBtn correctAns" type="submit" value="correct" name="pick">Answer</button>
     </form>
        <div>
-        <button className="answerBtn wrongAns" type="radio" value="wrong" name="pick" onclick="{change_wrongAns}">Answer</button>
+        {/* <button className="answerBtn wrongAns" type="radio" value="wrong" name="pick" onClick={change_wrongAns}>Answer</button> */}
        </div>
      </div>
     )
