@@ -10,6 +10,9 @@ _handleChoice = (event) => {
   console.log("Clicks fired!");
 }
 
+_handleLevel = (event) => {
+  console.log("Correct! Next Level!");
+}
   render(){
     let className = `hw-100-percent ${this.props.trivia}`
     return(
