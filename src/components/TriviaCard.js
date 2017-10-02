@@ -10,7 +10,8 @@ export default class TriviaCard extends Component {
     console.log(this.props.answersArr);
     console.log("answers", answers);
     return(
-    <div>
+    <div className="card w-75">
+      <div className="tctester_card">
       {answers.map((answerInfo) => {
         return (
           <div key={answerInfo.name} className="singular-choice">
@@ -21,12 +22,24 @@ export default class TriviaCard extends Component {
           </div>
         )
       })}
-    <button className="answerBtn btn btn-primary" onClick={this.props.handleSubmit}>
+      <br></br>
+    <div className="row justify-content-center">
+
+    <button className="btn btn-lg-center" onClick={this.props.handleSubmit}>
       Answer!
     </button>
+
+    </div>
+    </div>
     </div>
   )}
 }
+
+
+
+
+
+
     // <div className="trivia_card">
     //   <img className="card-img" href="%PUBLIC_URL%/littleDrag.jpg" alt="Card image" />
     //   <div className="card-img-overlay">
