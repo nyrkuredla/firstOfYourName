@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 import {Route, Switch, HashRouter} from 'react-router-dom'
+import _ from "lodash"
 
 import HomeView from './HomeView'
 import ThronepediaView from './ThronepediaView'
@@ -45,7 +46,16 @@ class App extends Component {
   // I may need help making this happen
 
   _handleUsername = (username) => {
-    this.setState({username: username})
+    this.setState({
+      username: username,
+      correctAns: 0,
+      incorrectAns: 0,
+      titles: [
+        {title: 'bastard',
+        level: "low",
+        id: 0}
+      ]
+    })
   }
 
   _handleAnswer = (event) => {
@@ -76,7 +86,7 @@ class App extends Component {
             <Route exact path='/thronepedia/regions/:name' component={() => <DetailedRegionsView {...this.state}/>}/>
             <Route exact path='/thronepedia/houses/:name' component={() => <DetailedHousesView {...this.state}/>}/>
             <Route exact path='/thronepedia/characters/:name' component={() => <DetailedCharactersView {...this.state}/>}/>
-            <Route exact path='/trivia' component={() => <TriviaView {...this.state}/>}/>
+            <Route exact path='/trivia' component={() => <TriviaView {...this.state} handleAnswer={this._handleAnswer}/>}/>
             <Route exact path='/trivia/win' component={() => <WinView {...this.state}/>}/>
             <Route exact path='/trivia/lose' component={() => <HomeView {...this.state}/>}/>
           </Switch>
