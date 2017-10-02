@@ -19,7 +19,7 @@ export default class ThronepediaNav extends Component {
         <a className="nav-link text-white text-justify" href="/login">Login</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link text-white text-justify" href="/house">Houses</a>
+        <a className="nav-link text-white text-justify" href="/thonepedia/house">Houses</a>
       </li>
 
       <li className="nav-item">
