@@ -7,7 +7,7 @@ const ThreeColumns = (props) => {
 
               <div className = "col-6 d-flex flex-column w-33 h-65 ">
 
-                  <h3 id="house">House</h3>
+                  <h3>House</h3>
 
                 <div className= "border border-white  one-column  ">this is where the houses will go</div>
               </div>
