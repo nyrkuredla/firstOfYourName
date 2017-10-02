@@ -26,7 +26,6 @@ export default class ThronepediaNav extends Component {
         <a className="nav-link text-white text-justify" href="/characters">Characters</a>
       </li>
     </ul>
-
   </div>
 </nav>)
   }
