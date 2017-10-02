@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //functions from content files
-import { fetchRandomQuote, getCorrectAns, getIncorrectAns } from './src/content/trivia'
+import { fetchRandomQuote, getCorrectAnsObj, getIncorrectAnsObj } from './src/content/trivia'
 import { getRandomTitle } from './src/content/titles'
 import { getRandomDeath } from './src/content/deaths'
 import { getChosenHouseUrl, getChosenHouseData } from './src/content/housedata'
