@@ -65,8 +65,13 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+<<<<<<< HEAD
   height: 362px;
   width: 600px;
+=======
+  height: 350px;
+  width: 466px;
+>>>>>>> cedbcc3a5979f3238235a11d58b21788a0c8877a
 }
 
 #snow{
