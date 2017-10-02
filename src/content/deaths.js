@@ -32,7 +32,23 @@ const deaths = [
   { "id": 30, death: "killed by the plague", level: "low" }
 ]
 
-export function getRandomDeath () {
-  let randomIndex = _.random(0, deaths.length);
-  return deaths[randomIndex];
+let highLevelDeaths = deaths.filter(function(death) {
+  return death.level == "high";
+})
+
+let lowLevelDeaths = deaths.filter(function(death) {
+  return death.level == "low";
+})
+
+function getRandomHighDeath () {
+  let randomIndex = _.random(0, highLevelDeaths.length);
+  return highLevelDeaths[randomIndex];
 }
+
+function getRandomLowDeath () {
+  let randomIndex = _.random(0, lowLevelDeaths.length);
+  return lowLevelDeaths[randomIndex];
+}
+
+console.log(getRandomLowDeath());
+console.log(getRandomHighDeath());
