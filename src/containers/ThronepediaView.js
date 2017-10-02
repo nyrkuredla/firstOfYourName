@@ -11,8 +11,9 @@ export default class ThronepediaView extends Component{
     return(
 
       <div className={className}>
+          <ThronepediaNav/>
         <ThronepediaHeader/>
-        <ThronepediaNav/>
+
         <ThreeColumns/>
       </div>
     );

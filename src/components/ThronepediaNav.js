@@ -5,7 +5,7 @@ export default class ThronepediaNav extends Component {
     return (
 
 <nav className="navbar navbar-expand-lg thronepedia-nav text-justify text-center text-white">
-  <a className="navbar-brand text-justify text-white" href="#">Navbar</a>
+
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
