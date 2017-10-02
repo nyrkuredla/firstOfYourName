@@ -7,37 +7,57 @@ import ThronepediaHeader from '../components/ThronepediaHeader'
 import Select from '../components/Select'
 
 export default class HousesView extends Component{
+  constructor() {
+    super()
+    this.state = {
+      chosenHouse: "",
+      houseDataObj: {
+        "name": "",
+        "region": "",
+        "coatOfArms": "",
+        "words": "",
+        "titles": [],
+        "seats": [],
+        "ancestralWeapons": []
+      }
+    }
+  }
+
+  handleSelect = (event) => {
+    this.setState({chosenHouse: event.target.value})
+  }
+
   render(){
     let className = `hw-100-percent ${this.props.bodyClassName.thronepedia}`
     return(
       <div className={className}>
         <ThronepediaHeader/>
-        <Select/>
+        <p>Choose a House</p>
         <div className="carousel-div col-6 mx-auto">
         <Carousel>
-          <div>
-            <img src="./arryn.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hoarryn2.jpg" />
           </div>
-          <div>
-            <img src="./baratheon.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hobaratheon2.jpg" />
           </div>
-          <div>
-            <img src="./greyjoy.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hogreyjoy2.jpg" />
           </div>
-          <div>
-            <img src="./lannister.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./holannister2.jpg" />
           </div>
-          <div>
-            <img src="./stark.jpg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./strak.jpg" />
           </div>
-          <div>
-            <img src="./targaryen.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hotargaryen2.jpg" />
           </div>
-          <div>
-            <img src="./tully.jpeg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hotully2.jpg" />
           </div>
-          <div>
-            <img src="./tyrell.jpg" />
+          <div onChange ={this.handleSelect}>
+            <img src="./hotyrell.jpg" />
           </div>
         </Carousel>
         </div>

@@ -54,10 +54,8 @@ export function getCorrectAnsObj (input) {
   }
 }
 
-// export function getIncorrectAnsObj() {
+// export function getIncorrectAnsObj(correctChar, answersArr) {
 //   //TO DO: get correct answer character from state, then:
-//   let correctChar = this.state.correctAnsObj.answer;
-//   let answersArr = this.state.answersArr;
 //   for (let i = answersArr.length; i < 4; i++) {
 //     let randomCharArr = _.shuffle(quoteCharArr);
 //     let incorrectAnsObj = { "answer": "", "isCorrect": false };
