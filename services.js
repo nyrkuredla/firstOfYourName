@@ -52,10 +52,12 @@ export function getCorrectAnsObj (input) {
   }
   else {
     //TO DO: repeat the operation to pull a new quote and match the new quote character
+
   }
 }
 
-export function getIncorrectAnsObj(correctChar, answersArr) {
+export function getIncorrectAnsObj(correctChar) {
+  let answersArr = [];
   //TO DO: get correct answer character from state, then:
   for (let i = 0; i < 3; i++) {
     let randomCharArr = _.shuffle(quoteCharArr);
@@ -67,6 +69,7 @@ export function getIncorrectAnsObj(correctChar, answersArr) {
       answersArr.push(incorrectAnsObj)
     }
   }
+  answersArr.push({ name: correctChar, answer: correctChar, isCorrect: true})
   return answersArr;
 }
 
