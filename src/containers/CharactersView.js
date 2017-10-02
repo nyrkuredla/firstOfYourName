@@ -48,10 +48,6 @@ export default class CharactersView extends Component{
             <p className="legend">Petyr Baelish</p>
           </div>
           <div>
-            <img src="./olenna.jpg" />
-            <p className="legend">Olenna Tyrell, the Queen of Thorns</p>
-          </div>
-          <div>
             <img src="./Renly.jpg" />
             <p className="legend">Renly Baratheon</p>
           </div>
