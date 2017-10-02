@@ -34,5 +34,5 @@ const deaths = [
 
 export function getRandomDeath () {
   let randomIndex = _.random(0, deaths.length);
-  return deaths[randomIndex];
+  return deaths[randomIndex].death;
 }

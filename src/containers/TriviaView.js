@@ -3,6 +3,7 @@ import axios from 'axios';
 import {fetchRandomQuote, getCorrectAnsObj, getIncorrectAnsObj} from '../../services'
 import TriviaHeader from "../components/TriviaHeader"
 import TriviaCard from "../components/TriviaCard"
+import LoseView from "./LoseView"
 import '../styles/scrollBackdrop.css'
 
 export default class TriviaView extends Component {

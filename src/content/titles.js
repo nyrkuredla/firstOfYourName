@@ -62,5 +62,5 @@ const titles =
 
 export function getRandomTitle () {
    let randomIndex = _.random(0, titles.length);
-   return titles[randomIndex];
+   return titles[randomIndex].title;
  }
