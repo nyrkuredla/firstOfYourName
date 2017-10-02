@@ -1,9 +1,5 @@
 
 //functions from content files
-<<<<<<< HEAD
-import { fetchRandomQuote, getCorrectAnsObj, getIncorrectAnsObj } from './src/content/trivia'
-=======
->>>>>>> 95204e841a7fee4c5fcd71f4d34cf09b6eb959c3
 import { getRandomTitle } from './src/content/titles'
 import { getRandomDeath } from './src/content/deaths'
 import { getChosenHouseUrl, getChosenHouseData } from './src/content/housedata'
