@@ -1,1 +1,7 @@
 /*triviaCard.css*/
+.card{
+  background: transparent;
+  margin: 0 auto;
+  text-align: left;
+  color: black;
+}
