@@ -14,20 +14,6 @@ export default class TriviaCard extends Component {
           <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
-
     )
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
