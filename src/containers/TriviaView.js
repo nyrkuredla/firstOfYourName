@@ -14,8 +14,7 @@ _handleLevel = (event) => {
   console.log("Correct! Next Level!");
 }
   render(){
-    console.log("username from app props", this.props.username);
-    let className = `hw-100-percent ${this.props.trivia}`
+    let className = `hw-100-percent ${this.props.bodyClassName.trivia}`
     return(
     <div className={className}>
       <TriviaHeader/>
