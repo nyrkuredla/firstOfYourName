@@ -20,9 +20,17 @@ _handleLevel = (event) => {
       <TriviaHeader/>
       <div className="parchment mx-auto">
       <TriviaCard/>
-      {/* <div className="questions parchment">
+      <div className="questions parchment">
         <h2>Who said it?</h2>
         <p>change for questions</p>
+
+      </div>
+    <form>
+        <button className="answerBtn correctAns" type="submit" value="correct" name="pick">Answer</button>
+    </form>
+       <div>
+      {/* <button className="answerBtn wrongAns" type="radio" value="wrong" name="pick" onClick={change_wrongAns}>Answer</button> */}
+
        <div className="col-6 mx-auto">
            <div className="input-group">
              <span className="input-group-addon">
@@ -33,8 +41,9 @@ _handleLevel = (event) => {
              </label>
            </div>
          </div>
-       </div> */}
        </div>
+       </div>
+
        </div>
     )
   }
