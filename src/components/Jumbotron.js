@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import ModalButtons from '../containers/ModalButtons'
-import ModalBut from './Modals'
+import ModalBut from './ModalBut'
 import ThroneBut from './ThroneBut'
 
 export default class Jumbotron extends Component {
