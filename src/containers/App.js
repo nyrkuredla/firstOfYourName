@@ -58,11 +58,15 @@ class App extends Component {
     })
   }
 
-  _handleAnswer = (event) => {
-    if (this.target.value === true) {
-      correctAns += 1
+  _handleAnswer = (guessedChar, answer) => {
+    let correctCount = this.state.correctAns;
+    let incorrectCount = this.state.incorrectAns;
+    if (guessedChar === answer) {
+      correctCount += 1;
+      this.setState({correctAns: correctCount})
     } else {
-      incorrectAns += 1
+      incorrectCount += 1;
+      this.setState({ incorrectAns: incorrectCount})
     }
   }
   // also add a title?  talk with Ryan about this one.
@@ -86,7 +90,10 @@ class App extends Component {
             <Route exact path='/thronepedia/regions/:name' component={() => <DetailedRegionsView {...this.state}/>}/>
             <Route exact path='/thronepedia/houses/:name' component={() => <DetailedHousesView {...this.state}/>}/>
             <Route exact path='/thronepedia/characters/:name' component={() => <DetailedCharactersView {...this.state}/>}/>
-            <Route exact path='/trivia' component={() => <TriviaView {...this.state} handleAnswer={this._handleAnswer}/>}/>
+            <Route exact path='/trivia' component={() => <TriviaView
+              {...this.state}
+              handleAnswer={this._handleAnswer}
+            />}/>
             <Route exact path='/trivia/win' component={() => <WinView {...this.state}/>}/>
             <Route exact path='/trivia/lose' component={() => <HomeView {...this.state}/>}/>
           </Switch>

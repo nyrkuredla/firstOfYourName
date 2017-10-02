@@ -21,7 +21,7 @@ export default class TriviaCard extends Component {
           </div>
         )
       })}
-    <button className="answerBtn btn btn-primary" onClick={this._handleSubmit}>
+    <button className="answerBtn btn btn-primary" onClick={this.props.handleSubmit}>
       Answer!
     </button>
     </div>

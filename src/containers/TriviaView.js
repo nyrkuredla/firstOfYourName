@@ -33,7 +33,6 @@ export default class TriviaView extends Component {
     let correctChar = this.state.correctAnsObj.answer;
     let answersArr = this.state.answersArr;
   axios.get("https://got-quotes.herokuapp.com/quotes").then((response) => {
-    console.log(response.data.character);
     let newAnswers = getIncorrectAnsObj(response.data.character)
 
     this.setState({
@@ -47,9 +46,9 @@ export default class TriviaView extends Component {
     })
     answersArr.push(this.state.correctAnsObj)
     answersArr = _.shuffle(answersArr);
-    console.log("answersArr", this.state);
   })
 }
+//REMEMBER we need to Shuffle
 
 _handleInput = (evt) => {
   //set state on answer select
@@ -61,6 +60,7 @@ _handleInput = (evt) => {
 _handleSubmit = (evt) => {
   evt.preventDefault();
   this.setState({"guessedChar": this.state.selectedChar});
+  this.props.handleAnswer(this.state.selectedChar, this.state.correctAnsObj.answer)
 }
 
   render() {
