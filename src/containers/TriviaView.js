@@ -14,12 +14,13 @@ _handleLevel = (event) => {
   console.log("Correct! Next Level!");
 }
   render(){
+    console.log("username from app props", this.props.username);
     let className = `hw-100-percent ${this.props.trivia}`
     return(
     <div className={className}>
       <TriviaHeader/>
       <div className="parchment mx-auto">
-      <TriviaCard/>
+      {/* <TriviaCard/> */}
       <div className="questions parchment">
         <h2>Who said it?</h2>
         <p>change for questions</p>
