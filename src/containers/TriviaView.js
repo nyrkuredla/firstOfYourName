@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-
+import { fetchRandomQuote, getCorrectAnsObj, getIncorrectAnsObj } from '../../services'
 import TriviaHeader from "../components/TriviaHeader"
 import TriviaCard from "../components/TriviaCard"
 import '../styles/scrollBackdrop.css'
