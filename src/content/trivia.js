@@ -37,37 +37,39 @@ export function fetchRandomQuote () {
 }
 
 //match character from random quote to array of possible answers. if there is an answer, proceed; if not, repeat the fetch request (this is because there are some characters and quotes that are incorrectly attributed or just very uncommon)
-export function getCorrectAns (input) {
+export function getCorrectAnsObj (input) {
   //TO DO: link input to user input on trivia page (set state)
-  let quoteChar = "olenna"; //for testing
-  let correctAns = { "answer": "", "isCorrect": true }
+  let quoteChar = _.lowerCase(input);
+  let correctAnsObj = { "answer": "", "isCorrect": true, "name": "" }
   if (_.find(quoteCharArr, ['char', quoteChar])) {
     //TO DO: update state with correct answer
-    correctAns.name = (_.find(quoteCharArr, ['char', quoteChar])).name
-    correctAns.answer = quoteChar;
-    answersArr.push(correctAns);
-    return correctAns;
+    correctAnsObj.name = (_.find(quoteCharArr, ['char', quoteChar])).name
+    correctAnsObj.answer = quoteChar;
+    answersArr.push(correctAnsObj);
+    return correctAnsObj;
   }
   else {
     //TO DO: repeat the operation to pull a new quote and match the new quote character
-    console.log("boo, no correct answer item found")
+
   }
 }
 
-export function getIncorrectAns() {
+export function getIncorrectAnsObj() {
   //TO DO: get correct answer character from state, then:
-  let correctChar = "olenna" //for testing
+  let correctChar = this.state.correctAnsObj.answer;
+  let answersArr = this.state.answersArr;
   for (let i = answersArr.length; i < 4; i++) {
     let randomCharArr = _.shuffle(quoteCharArr);
-    let incorrectAns = { "answer": "", "isCorrect": false };
+    let incorrectAnsObj = { "answer": "", "isCorrect": false };
     let randomChar = randomCharArr[i];
     if (randomCharArr[i].char !== correctChar) {
-      incorrectAns.name = randomChar.name;
-      incorrectAns.answer = randomChar.char;
-      answersArr.push(incorrectAns)
+      incorrectAnsObj.name = randomChar.name;
+      incorrectAnsObj.answer = randomChar.char;
+      answersArr.push(incorrectAnsObj)
     }
   }
   answersArr = _.shuffle(answersArr)
+  this.setState({ "answersArr": answersArr})
   return answersArr;
 }
 
@@ -79,4 +81,4 @@ export function getIncorrectAns() {
   //if correct: display correct answer alert and user correct answer count gets added one.
   //if incorrect: display incorrect answer alert and user incorrect answer count gets added one.
 
-console.log(getIncorrectAns());
+console.log(getIncorrectAnsObj());
