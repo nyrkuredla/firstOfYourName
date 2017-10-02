@@ -24,7 +24,7 @@ export default class CharactersView extends Component{
             <p className="legend">Bronn of the Blackwater</p>
           </div>
           <div>
-            <img src="./brynden2.jpg" />
+            <img src="./brynden.jpg" />
             <p className="legend">Brynden Tully, the Blackfish</p>
           </div>
           <div>

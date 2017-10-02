@@ -54,24 +54,24 @@ export function getCorrectAnsObj (input) {
   }
 }
 
-export function getIncorrectAnsObj() {
-  //TO DO: get correct answer character from state, then:
-  let correctChar = this.state.correctAnsObj.answer;
-  let answersArr = this.state.answersArr;
-  for (let i = answersArr.length; i < 4; i++) {
-    let randomCharArr = _.shuffle(quoteCharArr);
-    let incorrectAnsObj = { "answer": "", "isCorrect": false };
-    let randomChar = randomCharArr[i];
-    if (randomCharArr[i].char !== correctChar) {
-      incorrectAnsObj.name = randomChar.name;
-      incorrectAnsObj.answer = randomChar.char;
-      answersArr.push(incorrectAnsObj)
-    }
-  }
-  answersArr = _.shuffle(answersArr)
-  this.setState({ "answersArr": answersArr})
-  return answersArr;
-}
+// export function getIncorrectAnsObj() {
+//   //TO DO: get correct answer character from state, then:
+//   let correctChar = this.state.correctAnsObj.answer;
+//   let answersArr = this.state.answersArr;
+//   for (let i = answersArr.length; i < 4; i++) {
+//     let randomCharArr = _.shuffle(quoteCharArr);
+//     let incorrectAnsObj = { "answer": "", "isCorrect": false };
+//     let randomChar = randomCharArr[i];
+//     if (randomCharArr[i].char !== correctChar) {
+//       incorrectAnsObj.name = randomChar.name;
+//       incorrectAnsObj.answer = randomChar.char;
+//       answersArr.push(incorrectAnsObj)
+//     }
+//   }
+//   answersArr = _.shuffle(answersArr)
+//   this.setState({ "answersArr": answersArr})
+//   return answersArr;
+// }
 
 //TO DO:
 
@@ -81,4 +81,4 @@ export function getIncorrectAnsObj() {
   //if correct: display correct answer alert and user correct answer count gets added one.
   //if incorrect: display incorrect answer alert and user incorrect answer count gets added one.
 
-console.log(getIncorrectAnsObj());
+// console.log(getIncorrectAnsObj());
