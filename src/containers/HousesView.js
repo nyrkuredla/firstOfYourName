@@ -36,28 +36,28 @@ export default class HousesView extends Component{
         <div className="carousel-div col-6 mx-auto">
         <Carousel>
           <div onChange ={this.handleSelect}>
-            <img src="./arryn.jpeg" />
+            <img src="./hoarryn.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./baratheon.jpeg" />
+            <img src="./hobaratheon.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./greyjoy.jpeg" />
+            <img src="./hogreyjoy.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./lannister.jpeg" />
+            <img src="./holannister.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./stark.jpg" />
+            <img src="./hostark.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./targaryen.jpeg" />
+            <img src="./hotargaryen.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./tully.jpeg" />
+            <img src="./hotully.jpg" />
           </div>
           <div onChange ={this.handleSelect}>
-            <img src="./tyrell.jpg" />
+            <img src="./hotyrell.jpg" />
           </div>
         </Carousel>
         </div>
