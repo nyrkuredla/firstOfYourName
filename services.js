@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 //functions from content files
-import { fetchRandomQuote, getCorrectAns, getIncorrectAns } from './content/trivia'
-import { getRandomTitle } from './content/titles'
-import { getRandomDeath } from './content/deaths'
-import { getChosenHouseUrl, getChosenHouseData } from './content/housedata.js'
-import { getChosenCharacterUrl, getChosenCharacterData } from './content/characterdata.js'
+import { fetchRandomQuote, getCorrectAns, getIncorrectAns } from './src/content/trivia'
+import { getRandomTitle } from './src/content/titles'
+import { getRandomDeath } from './src/content/deaths'
+import { getChosenHouseUrl, getChosenHouseData } from './src/content/housedata'
+import { getChosenCharacterUrl, getChosenCharacterData } from './src/content/characterdata'
 //check to make sure that functions are properly wired through services file to front pages!
 
 //links to APIs

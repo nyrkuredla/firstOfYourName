@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-
+import { fetchRandomQuote, getCorrectAnsObj, getIncorrectAnsObj } from '../../services'
 import TriviaHeader from "../components/TriviaHeader"
 
 export default class TriviaView extends Component{
