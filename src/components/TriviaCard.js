@@ -1,33 +1,37 @@
 // TriviaCard.js
-
-import React, { Component } from 'react'
+import _ from 'lodash'
+import React, {Component} from 'react'
 import '../styles/triviaCard.css'
 
 export default class TriviaCard extends Component {
-  render(){
+
+  render() {
+    let answers = this.props.answersArr
+    console.log(this.props.answersArr);
+    console.log("answers", answers);
     return(
-      <div className="trivia_card">
-        <img className="card-img" href="%PUBLIC_URL%/littleDrag.jpg" alt="Card image" />
-        <div className="card-img-overlay">
-          <h4 className="card-title">Card title</h4>
-          <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-
-    )
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div>
+      {answers.map((answerInfo) => {
+        return (
+          <div key={answerInfo.name} className="singular-choice">
+          <input className="form-check-input" type="radio" name="guessChar" value={answerInfo.answer} onClick={this.props.handleInput}/>
+          <label className="form-check-label">
+              {answerInfo.name}
+          </label>
+          </div>
+        )
+      })}
+    <button className="answerBtn btn btn-primary" onClick={this.props.handleSubmit}>
+      Answer!
+    </button>
+    </div>
+  )}
 }
+    // <div className="trivia_card">
+    //   <img className="card-img" href="%PUBLIC_URL%/littleDrag.jpg" alt="Card image" />
+    //   <div className="card-img-overlay">
+    //     <h4 className="card-title">Card title</h4>
+    //     <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    //     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    //   </div>
+    // </div>
