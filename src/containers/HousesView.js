@@ -8,7 +8,7 @@ import Select from '../components/Select'
 
 export default class HousesView extends Component{
   render(){
-    let className = `hw-100-percent ${this.props.thronepedia}`
+    let className = `hw-100-percent ${this.props.bodyClassName.thronepedia}`
     return(
       <div className={className}>
         <ThronepediaHeader/>
