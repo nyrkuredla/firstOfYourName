@@ -57,7 +57,7 @@ export default class ModalBut extends Component {
           <h2 ref={subtitle => this.subtitle = subtitle}></h2>
           <div id="login-overlay" className="modal-dialog modal-md">
             <div className="modal-content">
-              <RegisterView />
+              <RegisterView handleUsername={this.props.handleUsername}/>
             </div>
           </div>
         </Modal>

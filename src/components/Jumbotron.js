@@ -17,7 +17,7 @@ export default class Jumbotron extends Component {
           <ThroneBut />
         </div>
         <div>
-          <ModalBut />
+          <ModalBut handleUsername={this.props.handleUsername}/>
         </div>
       </div>
     )
