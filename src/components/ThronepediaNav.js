@@ -12,8 +12,7 @@ export default class ThronepediaNav extends Component {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
-
-      <li clasNames="nav-item active">
+      <li className="nav-item active">
         <a className="nav-link text-white text-justify " href="/">Home <span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
@@ -28,6 +27,7 @@ export default class ThronepediaNav extends Component {
       </li>
     </ul>
   </div>
-</nav>)
+</nav>
+    )
   }
 }

@@ -39,7 +39,7 @@ export function getChosenHouseUrl () {
 };
 
 export function getChosenHouseData () {
-  axios.get(getChosenHouseUrl().then((response) => {
+  axios.get(getChosenHouseUrl()).then((response) => {
     houseDataObj.name = response.data.name;
     houseDataObj.region = response.data.region;
     houseDataObj.coatOfArms = response.data.coatOfArms;
@@ -49,7 +49,7 @@ export function getChosenHouseData () {
     houseDataObj.ancestralWeapons = response.data.ancestralWeapons;
     console.log(houseDataObj);
     return houseDataObj;
-  });
+  })
 }
 
 
