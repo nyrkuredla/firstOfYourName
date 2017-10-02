@@ -1,7 +1,6 @@
 // Jumbotron.js
 
 import React, { Component } from 'react'
-import ModalButtons from '../containers/ModalButtons'
 import ModalBut from './ModalBut'
 import ThroneBut from './ThroneBut'
 
