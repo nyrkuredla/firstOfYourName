@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 
+
 import ThreeColumns from "../components/ThreeColumns";
 import ThronepediaNav from "../components/ThronepediaNav"
 import '../styles/thronepedianav.css';
@@ -7,7 +8,7 @@ import '../styles/thronepedianav.css';
 import ThronepediaHeader from "../components/ThronepediaHeader"
 export default class ThronepediaView extends Component{
   render(){
-    let className = `hw-100-percent ${this.props.thronepedia}`
+    let className = `hw-100-percent ${this.props.bodyClassName.thronepedia}`
     return(
 
       <div className={className}>

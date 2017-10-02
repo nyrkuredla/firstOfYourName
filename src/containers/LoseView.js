@@ -17,7 +17,7 @@ export default class LoseView extends Component{
     })
   }
   render(){
-    let className = `hw-100-percent ${this.props.trivia}`
+    let className = `hw-100-percent ${this.props.bodyClassName.trivia}`
     return(
       <div className={className}>
       <TriviaHeader/>

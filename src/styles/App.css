@@ -2,6 +2,7 @@
 .hw-100-percent{
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 .carousel-div{

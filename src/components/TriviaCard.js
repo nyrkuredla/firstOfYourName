@@ -1,11 +1,12 @@
 // TriviaCard.js
 
 import React, { Component } from 'react'
+import '../styles/triviaCard.css'
 
 export default class TriviaCard extends Component {
   render(){
     return(
-      <div className="card">
+      <div className="trivia_card">
         <img className="card-img" href="%PUBLIC_URL%/littleDrag.jpg" alt="Card image" />
         <div className="card-img-overlay">
           <h4 className="card-title">Card title</h4>
