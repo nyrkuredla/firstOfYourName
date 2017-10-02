@@ -1,4 +1,8 @@
 .house-col, .characters-col {
   background-color: rgba(117, 125, 138, .5);
   padding-top: 10px;
+  padding: 35px;
+}
+.house-col {
+    margin-right: 20px;
 }
