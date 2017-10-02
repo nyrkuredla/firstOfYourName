@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import LoginView from '../containers/LoginView'
 import RegisterView from '../containers/RegisterView'
-import './tb_styles.css'
+// import './tb_styles.css'
 
 const customStyles = {
   content : {
@@ -25,41 +25,31 @@ export default class ModalBut extends Component {
     this.state = {
       modalIsOpen: false
     };
-
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal() {
+  openModal = () => {
     this.setState({modalIsOpen: true});
   }
 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
-  }
-
-  closeModal() {
+  closeModal = () => {
     this.setState({modalIsOpen: false});
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Trivia</button>
+        <button onClick={this.openModal} className="btn btn-#808080 btn-lg">Trivia</button>
           <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
             onRequestClose={this.closeModal}
             style={customStyles}
             contentLabel="playerName">
-          <h2 ref={subtitle => this.subtitle = subtitle}></h2>
-          <div id="login-overlay" className="modal-dialog modal-md">
+
             <div className="modal-content">
               <RegisterView handleUsername={this.props.handleUsername}/>
             </div>
-          </div>
+
         </Modal>
       </div>
     )
