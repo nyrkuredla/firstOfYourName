@@ -3,6 +3,9 @@ import '../styles/App.css';
 import {Route, Switch, HashRouter} from 'react-router-dom'
 import _ from "lodash"
 
+import { getRandomTitle } from '../content/titles'
+import { getRandomDeath } from '../content/deaths'
+
 import HomeView from './HomeView'
 import ThronepediaView from './ThronepediaView'
 import RegionsView from './RegionsView'
@@ -28,6 +31,8 @@ class App extends Component {
       correctAns: 0,
       incorrectAns: 0,
       titles: [],
+      isDead: false,
+      obit: "",
       backgroundUrls: {
         level1: "level-1",
         level2: "level-2",
@@ -50,22 +55,30 @@ class App extends Component {
       username: username,
       correctAns: 0,
       incorrectAns: 0,
-      titles: [
-        {title: 'bastard',
-        level: "low",
-        id: 0}
-      ]
+      titles: ["bastard"]
     })
   }
 
   _handleAnswer = (guessedChar, answer) => {
     let correctCount = this.state.correctAns;
     let incorrectCount = this.state.incorrectAns;
+    let titlesArr = this.state.titles;
+    let deathstatement = getRandomDeath()
     if (guessedChar === answer) {
       correctCount += 1;
-      this.setState({correctAns: correctCount})
+      titlesArr.push(getRandomTitle())
+      this.setState({
+        correctAns: correctCount,
+        titles: titlesArr
+      })
     } else {
       incorrectCount += 1;
+      if (incorrectCount == 5){
+        this.setState({
+          isDead: true,
+          obit: deathstatement
+        });
+      }
       this.setState({ incorrectAns: incorrectCount})
     }
   }
@@ -90,17 +103,23 @@ class App extends Component {
             <Route exact path='/thronepedia/regions/:name' component={() => <DetailedRegionsView {...this.state}/>}/>
             <Route exact path='/thronepedia/houses/:name' component={() => <DetailedHousesView {...this.state}/>}/>
             <Route exact path='/thronepedia/characters/:name' component={() => <DetailedCharactersView {...this.state}/>}/>
-            <Route exact path='/trivia' component={() => <TriviaView
-              {...this.state}
-              handleAnswer={this._handleAnswer}
-            />}/>
+            <Route exact path='/trivia' component={
+              () => this.state.isDead ? <LoseView {...this.state} /> : (
+                <TriviaView
+                  {...this.state}
+                  handleAnswer={this._handleAnswer}
+                />)
+            }/>
             <Route exact path='/trivia/win' component={() => <WinView {...this.state}/>}/>
-            <Route exact path='/trivia/lose' component={() => <HomeView {...this.state}/>}/>
+            <Route exact path='/trivia/lose' component={() => <LoseView {...this.state}/>}/>
           </Switch>
         </HashRouter>
       </div>
     );
   }
 }
+
+// for the trivia route within component prop for Route
+// () => this.state.isDead ? <LoseView {...this.state} /> : <TriviaView/>
 
 export default App;
