@@ -7,28 +7,45 @@ export default class CrestCarousel extends Component {
     return (
       <Carousel>
         <div>
-          <img src="public/arryn.jpeg" />
+          <a href="houses/7">
+            <img src="public/arryn.jpeg" />
+          </a>
         </div>
         <div>
-          <img src="public/baratheon.jpeg" />
+          <a href='houses/229'>
+            <img src="public/baratheon.jpeg" />
+          </a>
         </div>
         <div>
-          <img src="public/greyjoy.jpeg" />
+          <a href='houses/169'>
+            <img src="public/greyjoy.jpeg" />
+          </a>
         </div>
         <div>
-          <img src="public/lannister.jpeg" />
+          <a href='houses/229'>
+            <img src="public/lannister.jpeg" />
+          </a>
         </div>
         <div>
-          <img src="public/stark.jpg" />
+          <a href='houses/362'>
+            <img src="public/stark.jpg" />
+          </a>
         </div>
         <div>
-          <img src="public/targaryen.jpeg" />
+          <a href='houses/378'>
+            <img src="public/targaryen.jpeg" />
+          </a>
         </div>
         <div>
-          <img src="public/tully.jpeg" />
+          <a href='houses/395'>
+            <img src="public/tully.jpeg" />
+          </a>
         </div>
+
         <div>
-          <img src="public/tyrell.jpg" />
+          <a href='houses/395'>
+            <img src="public/tyrell.jpg" />
+          </a>
         </div>
       </Carousel>
     )
