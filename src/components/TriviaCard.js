@@ -6,9 +6,7 @@ import '../styles/triviaCard.css'
 export default class TriviaCard extends Component {
 
   render() {
-    let answers = _.shuffle(this.props.answersArr)
-    console.log(this.props.answersArr);
-    console.log("answers", answers);
+    let answers = this.props.answersArr
     return(
     <div className="card w-75">
       <div className="tctester_card">
