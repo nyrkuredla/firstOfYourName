@@ -70,7 +70,6 @@ _handleSubmit = (evt) => {
 }
 
   render() {
-    let answersProps = _.shuffle(this.state.answersArr)
     let className = `hw-100-percent ${this.props.bodyClassName.trivia}`
     return (
       <div className={className}>
