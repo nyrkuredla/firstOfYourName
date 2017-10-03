@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 
 import ThronepediaHeader from '../components/ThronepediaHeader'
+import CharacterCard from '../components/CharacterCard'
 
 export default class DetailedCharactersView extends Component{
   render(){
@@ -8,6 +9,7 @@ export default class DetailedCharactersView extends Component{
     return(
       <div className={className}>
         <ThronepediaHeader/>
+        <CharacterCard/>
       </div>
     )
   }
