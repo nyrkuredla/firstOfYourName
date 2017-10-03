@@ -36,11 +36,3 @@ export function getRandomDeath () {
   let randomIndex = _.random(0, deaths.length);
   return deaths[randomIndex].death;
 }
-
-function getRandomLowDeath () {
-  let randomIndex = _.random(0, lowLevelDeaths.length);
-  return lowLevelDeaths[randomIndex];
-}
-
-console.log(getRandomLowDeath());
-console.log(getRandomHighDeath());
