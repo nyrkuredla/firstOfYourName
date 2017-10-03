@@ -20,47 +20,69 @@ export default class CharactersView extends Component{
         <div className="carousel-div col-6 mx-auto">
         <Carousel>
           <div>
-            <img src="./bronn.jpg" />
+            <a href='#'>
+              <img src="./bronn.jpg" />
+            </a>
             <p className="legend">Bronn of the Blackwater</p>
           </div>
           <div>
-            <img src="./brynden.jpg" />
+            <a href='#'>
+              <img src="./brynden.jpg" />
+            </a>
             <p className="legend">Brynden Tully, the Blackfish</p>
           </div>
           <div>
-            <img src="./cersei.jpg" />
+            <a href='#'>
+              <img src="./cersei.jpg" />
+            </a>
             <p className="legend">Cersei Lannister</p>
           </div>
           <div>
-            <img src="./davos.jpg" />
+            <a href='#'>
+              <img src="./davos.jpg" />
+            </a>
             <p className="legend">Davos Seaworth, the Onion Knight</p>
           </div>
           <div>
-            <img src="./hound.jpg" />
+            <a href='#'>
+              <img src="./hound.jpg" />
+            </a>
             <p className="legend">Sandor Clegane, the Hound</p>
           </div>
           <div>
-            <img src="./jaime.jpg" />
+            <a href='#'>
+              <img src="./jaime.jpg" />
+            </a>
             <p className="legend">Jaime Lannister</p>
           </div>
           <div>
-            <img src="./Littlefinger.jpg" />
+            <a href='#'>
+              <img src="./Littlefinger.jpg" />
+            </a>
             <p className="legend">Petyr Baelish</p>
           </div>
           <div>
-            <img src="./Renly.jpg" />
+            <a href='#'>
+              <img src="./Renly.jpg" />
+            </a>
             <p className="legend">Renly Baratheon</p>
           </div>
           <div>
-            <img src="./sansa.jpg" />
+            <a href='#'>
+              <img src="./sansa.jpg" />
+            </a>
             <p className="legend">Sansa Stark</p>
           </div>
           <div>
-            <img src="./tyrion.jpg" />
+            <a href='#'>
+              <img src="./tyrion.jpg" />
+            </a>
             <p className="legend">Tyrion Lannister</p>
           </div>
           <div>
-            <img src="./varys.jpg" />
+            <a href='#'>
+              <img src="./varys.jpg" />
+            </a>
             <p className="legend">Varys, the Spider</p>
           </div>
         </Carousel>
