@@ -12,6 +12,7 @@ export default class ProfileCard extends Component {
    };
 
   render() {
+
     let finalTitles = "";
     this.props.titles.forEach(function (item) {(
       finalTitles += (", " + item)
