@@ -45,10 +45,10 @@ let characterDataObj = {
 
 //FUNCTIONS
 
-export function getChosenCharacterUrl () {
+export function getChosenCharacterUrl (chosenCharacter) {
   //get characterURL from user input (dropdown)
   let chosenCharacterUrl = apiLink;
-  let chosenCharacter = "cersei"; //for testing; this will come from dropdown
+  // let chosenCharacter = "cersei"; //for testing; this will come from dropdown
   let characterArrUrl = _.find(majorCharactersArr, ['character', chosenCharacter]).url;
   chosenCharacterUrl += characterArrUrl;
   return chosenCharacterUrl;
