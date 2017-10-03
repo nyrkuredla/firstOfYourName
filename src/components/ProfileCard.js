@@ -18,11 +18,6 @@ export default class ProfileCard extends Component {
       <div className="profile_wrapper">
         <div className="row">
           <div className="col-lg-3 col-sm-6">
-            <div className="cardheader">
-            </div>
-            <div className="profile_image">
-              <img alt="" src="" />
-            </div>
             <div className="profile_info">
               <div className="profile_name">
                <h3>{this.props.name}</h3>
