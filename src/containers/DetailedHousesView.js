@@ -8,6 +8,7 @@ export default class DetailedHousesView extends Component{
     return(
       <div className={className}>
         <ThronepediaHeader/>
+        <CharacterCard/>
       </div>
     )
   }

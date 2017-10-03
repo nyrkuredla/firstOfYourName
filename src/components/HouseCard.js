@@ -6,7 +6,7 @@ export default class CharacterCard extends Component {
     return (
     <div class="card">
       <div class="card-body">
-        This is some text within a card block.
+        This is the house card.
       </div>
     </div>
   }
