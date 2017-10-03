@@ -11,9 +11,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(express.static(__dirname + '/public'));
 
-
-
-
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
   filename: 'bundle.js',
@@ -25,7 +22,6 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 app.use(bodyParser.json());
-
 
 const server = app.listen(process.env.PORT || 3000, function() {
   const host = server.address().address;

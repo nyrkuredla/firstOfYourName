@@ -8,13 +8,19 @@ import RegisterView from '../containers/RegisterView'
 // import './tb_styles.css'
 
 const customStyles = {
+  overlay : {
+    backgroundColor       : 'rgba(0, 0, 0, 0.75)'
+  },
+
   content : {
-    top                   : '50%',
+    top                   : '60%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)',
+    background            : 'transparent',
+    border                : 'hidden'
   }
 };
 
@@ -37,7 +43,7 @@ export default class ModalBut extends Component {
 
   render() {
     return (
-      <div>
+      <div className="name_modal">
         <button onClick={this.openModal} className="btn btn-#808080 btn-lg">Trivia</button>
           <Modal
             isOpen={this.state.modalIsOpen}
