@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 import ThronepediaHeader from '../components/ThronepediaHeader'
-import HouseCard from '../components/HouseCard'
+
 
 export default class DetailedHousesView extends Component{
   render(){
@@ -9,7 +9,7 @@ export default class DetailedHousesView extends Component{
     return(
       <div className={className}>
         <ThronepediaHeader/>
-        <HouseCard/>
+
       </div>
     )
   }
