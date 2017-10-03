@@ -38,27 +38,26 @@ export function fetchRandomQuote () {
   //set state: quote (from response)
 }
 
-//match character from random quote to array of possible answers. if there is an answer, proceed; if not, repeat the fetch request (this is because there are some characters and quotes that are incorrectly attributed or just very uncommon)
-export function getCorrectAnsObj (input) {
-  //TO DO: link input to user input on trivia page (set state)
-  let quoteChar = _.lowerCase(input);
-  let correctAnsObj = { "answer": "", "isCorrect": true, "name": "" }
-  if (_.find(quoteCharArr, ['char', quoteChar])) {
-    //TO DO: update state with correct answer
-    correctAnsObj.name = (_.find(quoteCharArr, ['char', quoteChar])).name
-    correctAnsObj.answer = quoteChar;
-    answersArr.push(correctAnsObj);
-    return correctAnsObj;
-  }
-  else {
-    //TO DO: repeat the operation to pull a new quote and match the new quote character
-
-  }
-}
+// //match character from random quote to array of possible answers. if there is an answer, proceed; if not, repeat the fetch request (this is because there are some characters and quotes that are incorrectly attributed or just very uncommon)
+// export function getCorrectAnsObj (input) {
+//   //TO DO: link input to user input on trivia page (set state)
+//   let quoteChar = _.lowerCase(input);
+//   let correctAnsObj = { "answer": "", "isCorrect": true, "name": "" }
+//   if (_.find(quoteCharArr, ['char', quoteChar])) {
+//     //TO DO: update state with correct answer
+//     correctAnsObj.name = (_.find(quoteCharArr, ['char', quoteChar])).name
+//     correctAnsObj.answer = quoteChar;
+//     answersArr.push(correctAnsObj);
+//     return correctAnsObj;
+//   }
+//   else {
+//     //TO DO: repeat the operation to pull a new quote and match the new quote character
+//
+//   }
+// }
 
 export function getIncorrectAnsObj(correctChar) {
   let answersArr = [];
-  //TO DO: get correct answer character from state, then:
   for (let i = 0; i < 3; i++) {
     let randomCharArr = _.shuffle(quoteCharArr);
     let incorrectAnsObj = { "answer": "", "isCorrect": false };
@@ -69,16 +68,7 @@ export function getIncorrectAnsObj(correctChar) {
       answersArr.push(incorrectAnsObj)
     }
   }
+  answersArr = _.uniq(answersArr)
   answersArr.push({ name: correctChar, answer: correctChar, isCorrect: true})
   return answersArr;
 }
-
-//TO DO:
-
-//user select button onclick changes answer state to answer.
-//user submit button onsubmit:
-  //prevents default, sets state and compares state answer to correct answer.
-  //if correct: display correct answer alert and user correct answer count gets added one.
-  //if incorrect: display incorrect answer alert and user incorrect answer count gets added one.
-
-// console.log(getIncorrectAnsObj());

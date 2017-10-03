@@ -21,21 +21,25 @@ export default class TriviaView extends Component {
       quote: ""
     }
   }
-
-  _handleChoice = (event) => {
-    console.log("Clicks fired!");
-  }
-
-  _handleLevel = (event) => {
-    console.log("Correct! Next Level!");
-  }
+  //
+  // _handleChoice = (event) => {
+  //   console.log("Clicks fired!");
+  // }
+  //
+  // _handleLevel = (event) => {
+  //   console.log("Correct! Next Level!");
+  // }
 
   componentDidMount () {
     let correctChar = this.state.correctAnsObj.answer;
     let answersArr = this.state.answersArr;
+    //fetching random quote from quotes API
   axios.get("https://got-quotes.herokuapp.com/quotes").then((response) => {
+    //using character returned in API fetch to generate list of random incorrect characters
     let newAnswers = getIncorrectAnsObj(response.data.character)
-
+    newAnswers = _.uniq(newAnswers)
+    let randIndex = _.random(0, (newAnswers.length - 1))
+    //setting state with answers
     this.setState({
       answersArr: newAnswers,
       quote: response.data.quote,
@@ -45,8 +49,6 @@ export default class TriviaView extends Component {
         answer: response.data.character
       }
     })
-    answersArr.push(this.state.correctAnsObj)
-    answersArr = _.shuffle(answersArr);
   })
 }
 //REMEMBER we need to Shuffle
@@ -59,12 +61,14 @@ _handleInput = (evt) => {
 }
 
 _handleSubmit = (evt) => {
+  //set state on answer submit and update user correct/incorrect answer counts accordingly
   evt.preventDefault();
   this.setState({"guessedChar": this.state.selectedChar});
   this.props.handleAnswer(this.state.selectedChar, this.state.correctAnsObj.answer)
 }
 
   render() {
+    let answersProps = _.shuffle(this.state.answersArr)
     let className = `hw-100-percent ${this.props.bodyClassName.trivia}`
     return (
       <div className={className}>
@@ -82,7 +86,7 @@ _handleSubmit = (evt) => {
             </div>
             </div>
           </div>
-          <TriviaCard handleSubmit={this._handleSubmit} handleInput={this._handleInput} answersArr={this.state.answersArr}/>
+          <TriviaCard handleSubmit={this._handleSubmit} handleInput={this._handleInput} answersArr={answersProps}/>
         </div>
         </div>
     )}
