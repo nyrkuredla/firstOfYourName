@@ -68,14 +68,22 @@ _handleSubmit = (evt) => {
     let className = `hw-100-percent ${this.props.bodyClassName.trivia}`
     return (
       <div className={className}>
+
         <TriviaHeader/>
         <div className="parchment mx-auto">
           <div className="questions">
+              <br></br>
+                <br></br>
+                  <br></br>
+            <div className="card w-75">
+              <div className="row justify-content-center">
             <h2> Who Said It?</h2>
             <p>{this.state.quote}</p>
+            </div>
+            </div>
           </div>
           <TriviaCard handleSubmit={this._handleSubmit} handleInput={this._handleInput} answersArr={this.state.answersArr}/>
         </div>
         </div>
-      )}
+    )}
 }

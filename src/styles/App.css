@@ -1,4 +1,12 @@
-/*402e0c2*/
+
+
+
+
+@font-face {
+  font-family: "GoT";
+  src: url("/fonts/GoT.ttf");
+}
+
 .hw-100-percent{
   height: 100%;
   width: 100%;
@@ -66,8 +74,8 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 350px;
-  width: 466px;
+  height: 299px;
+  width: 400px;
 }
 
 #snow{
@@ -89,6 +97,11 @@ button{
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
 
+#username{
+  font-family: 'GoT';
+  width: auto;
+}
+
 .button_link{
   color: black;
   text-decoration: none;
@@ -98,6 +111,9 @@ button{
   color: black;
   text-decoration: none;
 }
+
+
+
 /*==================================================*/
 .stark{
 
