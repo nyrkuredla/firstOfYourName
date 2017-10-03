@@ -3,6 +3,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
+
 export default class RegisterView extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +37,10 @@ export default class RegisterView extends Component {
         <div className="row">
           <div className="col">
               <div className="input-group">
-                <input ref="username" onChange={this.handleName} name="username" value={this.state.name} type="text" placeholder="What is thy name?" className="form-control input-md"/>
+                <input ref="username" onChange={this.handleName} name="username" value={this.state.name} type="text" placeholder="thy name?" id="username" className="form-control input-group"/>
                 <span className="input-group-btn"/>
-                <button onClick={this.handleSubmit} id="nameButton" name="nameButton" type="button" className="btn btn-primary">
-                  <Link to="/trivia">Proceed</Link>
+                <button onClick={this.handleSubmit} id="username" name="nameButton" type="button" className="btn">
+                  <Link className="button_link" to="/trivia">Proceed</Link>
                 </button>
               </div>
           </div>
