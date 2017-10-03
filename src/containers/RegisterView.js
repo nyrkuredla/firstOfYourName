@@ -34,7 +34,7 @@ export default class RegisterView extends Component {
     return (
       <div className="card w-100">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col">
               <div className="input-group">
                 <input ref="username" onChange={this.handleName} name="username" value={this.state.name} type="text" placeholder="What is thy name?" className="form-control input-md"/>
                 <span className="input-group-btn"/>
